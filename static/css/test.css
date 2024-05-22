@@ -8,7 +8,7 @@ body, html {
     width: 100%;
     height: 100vh; /* Assurez-vous que c'est suffisamment haut pour afficher le contenu */
     position: relative; /* Important pour positionnement absolu des enfants */
-    background: linear-gradient(to bottom right, rgb(230, 226, 226) 70%, blue 30%);
+    /*background: linear-gradient(to bottom right, rgb(230, 226, 226) 70%, blue 30%);*/
 }
 
 .split-design img {
@@ -30,4 +30,28 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.img-call{
+    width: 15%;
+}
+.bg-index{
+    background: linear-gradient(to bottom right, rgb(248, 249, 251) 70%, rgb(150, 209, 249) 50%);
+    
+}
+.cards{
+    margin-left: 13%;
+    
+}
+.cnt{
+    margin-top: 7%;
+}
+.cards:hover{
+    border: 3px  solid rgb(150, 209, 249);
+}
+
+
+.title{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(76, 138, 180);
+   font-weight: bolder;
 }
