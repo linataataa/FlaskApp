@@ -1,0 +1,103 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.split-design {
+    width: 100%;
+    height: 100vh; /* Assurez-vous que c'est suffisamment haut pour afficher le contenu */
+    position: relative; /* Important pour positionnement absolu des enfants */
+    /*background: linear-gradient(to bottom right, rgb(230, 226, 226) 70%, blue 30%);*/
+}
+
+.split-design img {
+    position: absolute; /* Permet le positionnement libre dans le conteneur */
+}
+.message-box {
+    position: absolute;
+    bottom: 50%;  /* Le placer à mi-chemin de la hauteur du parent */
+    left: 10%;   /* Décaler légèrement vers la gauche depuis la droite */
+    transform: translate(50%, 50%); /* Ajuster précisément pour centrer par rapport à sa position */
+    width: 250px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-call{
+    width: 15%;
+}
+.bg-index{
+    background: linear-gradient(to bottom right, rgb(248, 249, 251) 70%, rgb(48, 68, 82) 50%);
+    
+}
+.cards{
+    margin-left: 13%;
+    
+}
+.cnt{
+    margin-top: 7%;
+}
+.cards:hover{
+    border: 3px  solid rgb(150, 209, 249);
+}
+
+
+.title{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(48, 68, 82);
+   font-weight: bolder;
+}
+.navin{
+    margin-top: 2%;
+   
+    margin-left: 19%;
+  
+}
+.nav{
+    
+    background-color:rgb(48, 68, 82) ;
+    }
+.nav-link{
+    margin-left: 10%;
+}
+.Jour-call{
+   display: none; 
+}
+.Services{
+    display: none;
+}
+.personnel{
+    display: none;
+}
+.prediction{
+    display: none;
+
+}
+
+.eve-call{
+    display: none; 
+ }
+.night-call{
+    display: none; 
+ }
+
+ .cont{
+    border: 4px solid rgb(237, 201, 25) ;
+    background-color: #aaa4a4;
+ }
+ .cont2{
+    border: 4px solid rgb(25, 152, 237) ;
+    background-color: #aaa4a4;
+ }
+  .cont3{
+    border: 4px solid rgb(155, 53, 38) ;
+    background-color: #aaa4a4;
+ }

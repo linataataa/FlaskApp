@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calls</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/test.css')}}">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="   navin col-8 rounded">
+        <nav class="nav  shadow-lg p-3 rounded ">
+           <a class="nav-link"> <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='/'">retour</button></a> 
+            <a class="nav-link" onclick="showday()"><button type="button"
+                    class="btn btn-outline-warning">Jour</button></a>
+            <a class="nav-link" onclick="showeve()"><button type="button"
+                    class="btn btn-outline-primary">Evening</button></a>
+            <a class="nav-link" onclick="shownight()"><button type="button"
+                    class="btn btn-outline-danger">Nuit</button></a>
+
+
+        </nav>
+    </div>
+
+
+    <!--Chart de jour call-->
+    <div class="Jour-call mt-5" id="Jour-call">
+        <div class="container cont  shadow-lg">
+            <div class="row">
+                <div class="col-5 m-2">
+                    Chart 1
+                </div>
+                <div class="col-5 m-2">
+                    Chart 2
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Chart de eve call-->
+    <div class="eve-call  mt-5" id="eve-call">
+        <div class="container cont2   shadow-lg">
+            <div class="row">
+                <div class="col-5 m-2">
+                    Chart 1
+                </div>
+                <div class="col-5 m-2">
+                    Chart 2
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Chart de night call-->
+    <div class="night-call  mt-5" id="night-call">
+        <div class="container cont3  shadow-lg">
+            <div class="row">
+                <div class="col-5 m-2">
+                    Chart 1
+                </div>
+                <div class="col-5 m-2">
+                    Chart 2
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/test.js') }}"></script>
+</body>
+
+</html>

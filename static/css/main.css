@@ -1,0 +1,8 @@
+.dashboard {
+    width: 80%; /* Largeur du dashboard */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 20px; /* Espacement interne */
+    background-color: #f0f0f0; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
