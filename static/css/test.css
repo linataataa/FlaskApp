@@ -91,15 +91,15 @@ body, html {
 
  .cont{
     border: 4px solid rgb(237, 201, 25) ;
-    background-color: #aaa4a4;
+    background-color: rgba(63, 76, 85, 0.821);
  }
  .cont2{
     border: 4px solid rgb(25, 152, 237) ;
-    background-color: #aaa4a4;
+    background-color: rgba(63, 76, 85, 0.821);
  }
   .cont3{
     border: 4px solid rgb(155, 53, 38) ;
-    background-color: #aaa4a4;
+    background-color: rgba(63, 76, 85, 0.821);
  }
 
  .img-container img {

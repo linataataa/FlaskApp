@@ -20,8 +20,7 @@
             <a class="nav-link"  onclick="services()"><button type="button"
                     class="btn btn-outline-warning">Services</button></a>
           
-            <a class="nav-link" onclick="personnel()"><button type="button"
-                    class="btn btn-outline-danger">personnel</button></a>
+         
                 <a class="nav-link" onclick="prediction()"><button type="button"
                         class="btn btn-outline-info">Prediction</button></a>
 
@@ -33,47 +32,25 @@
     <div class="Services mt-5" id="Services">
         <div class="container cont  shadow-lg">
             <div class="row">
-                <div class="col-5 m-2">
-                    chart 1
-                </div>
-                <div class="col-5 m-2">
-                    Chart 2
-                </div>
-                <div class="col-5 m-2">
-                    Chart 2
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="prediction  mt-5" id="prediction">
-        <div class="container cont2   shadow-lg">
-            <div class="row">
                 <div class="col-5 m-2 img-container" >
                     <img src="static/images/plot.png" alt="Histogramme des appels au service clientèle">
                 </div>
                 <div class="col-5 m-2 img-container">
                     <img src="static/images/plot2.png" alt="Relation entre les appels au service clientèle et le churn">
                 </div>
-                <div class="col-5 m-2 img-container">
+                <div class="col-5 mt-1 img-container">
                     <img src="static/images/average_calls.png" alt="Moyenne des appels au service clientèle par État">
                 </div>
             </div>
         </div>
     </div>
-    <!--Chart de night call-->
-    <div class="personnel mt-5" id="personnel">
-        <div class="container cont3  shadow-lg">
-            <div class="row">
-                <div class="col-5 m-2">
-                    Chart 1
-                    personnel
-                </div>
-                <div class="col-5 m-2">
-                    Chart 2
-                </div>
-            </div>
+    <div class="prediction  mt-5" id="prediction">
+        <div class="container cont2   shadow-lg">
+          
         </div>
     </div>
+    <!--Chart de night call-->
+   
     <script type='text/javascript' src="{{ url_for('static', filename='js/test.js') }}"></script>
 </body>
 
