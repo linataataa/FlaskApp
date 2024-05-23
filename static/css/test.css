@@ -101,3 +101,20 @@ body, html {
     border: 4px solid rgb(155, 53, 38) ;
     background-color: #aaa4a4;
  }
+
+ .img-container img {
+    width: 125%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    padding: 35px;
+    margin: 10px; 
+    border-radius: 8px; 
+}
+
+@media (max-width: 768px) {
+    .img-container img {
+        width: 100%;
+    }
+}
+
