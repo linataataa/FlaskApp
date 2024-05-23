@@ -10,13 +10,14 @@ app = Flask(__name__)
 
 # Initialize MongoDB client
 client = MongoClient('localhost', 27017)
-db = client['kafka']  # Replace with your database name
-collection = db['tele']
+db = client['churn']  # Replace with your database name
+collection = db['predictions']
 df = pd.DataFrame(list(collection.find()))
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
 
 @app.route('/calls')
 def calls():
@@ -24,7 +25,7 @@ def calls():
 
     if not df.empty:
         # Create a pie chart for churn
-        churn_counts = df['prediction'].value_counts()
+        churn_counts = df['International_plan'].value_counts()
         labels = churn_counts.index
         sizes = churn_counts.values
 
@@ -41,11 +42,11 @@ def calls():
         
         # Histogram for totalDayCalls and totalDayMinutes by state
         selected_states = ['AZ', 'CA', 'NY', 'TX']
-        selected_state_data = df[df['state'].isin(selected_states)]
+        selected_state_data = df[df['State'].isin(selected_states)]
 
         plt.figure(figsize=(12, 6))
-        state_day_calls = selected_state_data.groupby('state')['Total_day_calls'].sum()
-        state_day_minutes = selected_state_data.groupby('state')['Total_day_minutes'].sum()
+        state_day_calls = selected_state_data.groupby('State')['Total_day_calls'].sum()
+        state_day_minutes = selected_state_data.groupby('State')['Total_day_minutes'].sum()
        
         states = state_day_calls.index
         bar_width = 0.35
@@ -87,6 +88,7 @@ def calls():
         total_intl_charge = 0
     
     return render_template('calls.html', plot_urls=plot_urls, total_intl_charge=total_intl_charge)
+
 
 @app.route('/clients')
 def clients():

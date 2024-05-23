@@ -61,9 +61,8 @@
             <a class="nav-link" onclick="showday()"><button type="button"
                     class="btn btn-outline-warning">Jour</button></a>
             <a class="nav-link" onclick="showeve()"><button type="button"
-                    class="btn btn-outline-primary">Evening</button></a>
-            <a class="nav-link" onclick="shownight()"><button type="button"
-                    class="btn btn-outline-danger">Nuit</button></a>
+                    class="btn btn-outline-primary">Prédictions</button></a>
+            
 
 
         </nav>
@@ -75,63 +74,49 @@
         <div class="container cont  shadow-lg">
             <div class="row">
                 <div class="col-5 m-2">
-                    Chart 1
+                    <div class="card">
+                        <h2>Total Day Calls and Total Night Calls by State</h2>
+                        <img src="data:image/png;base64,{{ plot_urls[1] }}" alt="Total Day Calls and Total Night Calls by State">
+                    </div>
+
                 </div>
                 <div class="col-5 m-2">
-                    Chart 2
+                    <div class="card" id="card_card">
+                        <h2>Total International Charge</h2>
+                        <p style="color: orange; font-size: 2em;">{{ total_intl_charge }}</p>
+                    </div>
                 </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-10 m-2">
+                    <div class="card" >
+                        <h2>Histogramme de Total Day Minutes par International Plan</h2>
+                        <img src="data:image/png;base64,{{ plot_urls[2] }}" alt="Histogramme de Total Day Minutes par International Plan">
+                    </div>
+                </div>
+               
             </div>
         </div>
     </div>
     <!--Chart de eve call-->
-    <div class="eve-call  mt-5" id="eve-call">
-        <div class="container cont2   shadow-lg">
+    <div class="eve-call mt-5" id="eve-call">
+        <div class="container cont2  shadow-lg ">
             <div class="row">
-                <div class="col-5 m-2">
-                    Chart 1
+                <div class="col-5 m-2 text-center">
+                    
+                    <div class="card" style="width: 30rem;">
+                        <h2>Proportion of Churned vs Non-Churned Customers</h2>
+                        <img src="data:image/png;base64,{{ plot_urls[0] }}" alt="Churn Pie Chart">
+                    </div>
                 </div>
-                <div class="col-5 m-2">
-                    Chart 2
-                </div>
+               
             </div>
         </div>
     </div>
-    <!--Chart de night call-->
-    <div class="night-call  mt-5" id="night-call">
-        <div class="container cont3  shadow-lg">
-            <div class="row">
-                <div class="col-5 m-2">
-                    Chart 1
-                </div>
-                <div class="col-5 m-2">
-                    Chart 2
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <script type='text/javascript' src="{{ url_for('static', filename='js/test.js') }}"></script>
-    <div class="inline">
-        <div class="card" style="width: 30rem;">
-            <h2>Proportion of Churned vs Non-Churned Customers</h2>
-            <img src="data:image/png;base64,{{ plot_urls[0] }}" alt="Churn Pie Chart">
-        </div>
     
-        <div class="card">
-            <h2>Total Day Calls and Total Night Calls by State</h2>
-            <img src="data:image/png;base64,{{ plot_urls[1] }}" alt="Total Day Calls and Total Night Calls by State">
-        </div>
-       
-    </div>
-    <div class="inline">
-    <div class="card" id="card_card">
-        <h2>Total International Charge</h2>
-        <p style="color: orange; font-size: 2em;">{{ total_intl_charge }}</p>
-    </div>
-    <div class="card" >
-        <h2>Histogramme de Total Day Minutes par International Plan</h2>
-        <img src="data:image/png;base64,{{ plot_urls[2] }}" alt="Histogramme de Total Day Minutes par International Plan">
-    </div>
-    </div>
     
 </body>
 
