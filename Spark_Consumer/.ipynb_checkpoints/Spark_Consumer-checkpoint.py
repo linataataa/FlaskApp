@@ -124,7 +124,7 @@ assembler = VectorAssembler(inputCols=[
 transformed_df = assembler.transform(parsed_df)
 
 # Charger le modèle sauvegardé
-loaded_model = LogisticRegressionModel.load("C:\Users\bnima\Desktop\Project\modele.pkl")
+loaded_model = LogisticRegressionModel.load("modele.pkl")
 
 # Faire des prédictions sur les nouvelles données
 predictions = loaded_model.transform(transformed_df)
